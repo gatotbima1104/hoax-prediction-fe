@@ -3,6 +3,7 @@ import { Container, Row, Form } from "react-bootstrap";
 import { BsTwitter, BsGithub, BsLinkedin, BsInstagram } from "react-icons/bs";
 // import Articles from "./article";
 import News from "./news";
+import logo from "../assets/logo.jpg";
 
 const Home = () => {
   return (
@@ -40,19 +41,15 @@ const Home = () => {
       {/* About */}
       <div className="about">
         <Container>
-          <Row className="text-center">
-            <div className="col-md-6 my-5 border">
-              <p className="text-white desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-                neque incidunt facere harum numquam ab et deleniti id alias
-                quod?
+          <Row>
+            <div className="col-md-6 my-5 d-flex align-items-center">
+              <p className="text-white desc">Fake news on websites is a grave issue. These misleading stories deceive readers & spread discord. They come in forms like clickbait, sensational headlines, & fabricated sources. Fake news undermines trust, distorts public discourse, & harms democracy. We must be vigilant, verify information, & think critically
               </p>
             </div>
-            {/* <div className="col-md-6 my-5">
-                    <img src="" alt="on_going" />
-                </div> */}
-            <div className="col-md-6 my-5 border ">
-              <p className="text-white desc">Images</p>
+            <div className="col-md-6 my-5">
+              <img src={logo} alt="" style={{width: '100%'}}
+              className="rounded"
+              />
             </div>
           </Row>
         </Container>

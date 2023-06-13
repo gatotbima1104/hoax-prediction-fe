@@ -108,13 +108,12 @@
 }
 
 .about{
-    height: 100vh;
     background-color: #6d6875;
 }
 
 .desc{
     text-align: justify;
-    text-align: center;
+    text-align: start;
 }
 
 .articles{

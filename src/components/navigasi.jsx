@@ -1,14 +1,15 @@
 import React from 'react'
 import { Navbar, Container, Nav } from 'react-bootstrap'
 import {BsInstagram, BsTwitter} from 'react-icons/bs'
+import logos from '../assets/logos.jpg'
 
 const Menu = () => {
   return (
     <div>
-      <Navbar bg="light" expand="lg">
+      <Navbar bg="white" expand="lg">
       <Container>
         <Navbar.Brand href="/">
-            <img alt="logo" style={{ width: '50px', height: '50px'}}/>
+            <img src={logos} alt='logo' style={{ width: '50px', height: '50px'}}/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end'>
