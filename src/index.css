@@ -129,3 +129,12 @@
     background-color: #6d6875;
     color: #fff;
 }
+
+#result span{
+  font-weight: bold;
+}
+
+.contributor{
+  text-decoration: none;
+  color: #fff;
+}
