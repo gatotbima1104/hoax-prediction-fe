@@ -1,26 +1,46 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import axios from "axios";
 import { Container, Row } from "react-bootstrap";
+import newsData from "../data/newsData.json";
+
 
 const News = () => {
   const [news, setNews] = useState([]);
-  const fetchData = async () => {
-    try {
-      // const APIkey = "8a67098680f24938b76dca2e4e46eccd";
-      // const url =
-      //   "https://newsapi.org/v2/top-headlines?country=us&apiKey=" + APIkey;
-      const url = "https://newsapi.org/v2/everything?q=goverment&apiKey=8a67098680f24938b76dca2e4e46eccd"
-      const response = await axios.get(url);
-      setNews(response.data.articles);
-      console.log(response.data.articles);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+// When hit with API
+  // const fetchData = async () => {
+  //   try {
+  //     // const APIkey = "8a67098680f24938b76dca2e4e46eccd";
+  //     // const url =
+  //     //   "https://newsapi.org/v2/top-headlines?country=us&apiKey=" + APIkey;
+  //     const url = "https://newsapi.org/v2/everything?q=goverment&apiKey=8a67098680f24938b76dca2e4e46eccd"
+  //     const response = await axios.get(url);
+  //     setNews(response.data.articles);
+  //     console.log(response.data.articles);
 
+      
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
+  // When download with JSON automatic when run
+  // const APIkey = "8a67098680f24938b76dca2e4e46eccd";
+  //     const url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=" + APIkey;
+  //     const response = await axios.get(url);
+  //     setNews(response.data.articles);
+  //     console.log(response.data.articles);
+
+  //     // Save the data into a JSON file
+  //     const jsonData = JSON.stringify(response.data.articles, null, 2);
+  //     const blob = new Blob([jsonData], { type: "application/json" });
+  //     const url2 = URL.createObjectURL(blob);
+  //     const link = document.createElement("a");
+  //     link.href = url2;
+  //     link.download = "newsData.json";
+  //     link.click();
+  
   useEffect(() => {
-    fetchData();
+    setNews(newsData);
   }, []);
 
   return (
