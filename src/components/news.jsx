@@ -7,8 +7,9 @@ const News = () => {
   const [news, setNews] = useState([]);
   const fetchData = async () => {
     try {
+      const APIkey = "8a67098680f24938b76dca2e4e46eccd";
       const url =
-        "https://newsapi.org/v2/top-headlines?country=us&apiKey=8a67098680f24938b76dca2e4e46eccd";
+        "https://newsapi.org/v2/top-headlines?country=us&apiKey=" + APIkey;
       const response = await axios.get(url);
       setNews(response.data.articles);
       console.log(response.data.articles);
